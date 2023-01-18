@@ -828,7 +828,7 @@ public class CameraRollModule extends ReactContextBaseJavaModule {
     }
 
     int orientation = media.getInt(orientationIndex);
-    if (orientation % 180 != 0) {
+    if (orientation >= 0 && orientation % 180 != 0) {
       int temp = width;
       width = height;
       height = temp;
